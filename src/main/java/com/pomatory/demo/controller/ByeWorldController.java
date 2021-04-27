@@ -7,12 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ByeWorldController {
     @GetMapping
-    public String bye(@RequestParam(value = "name", defaultValue = "World") String name) {
-        if (name == "world") {
-            System.out.println("cool");
-        } else {
-            System.out.println("not cool");
-        }
-        return String.format("Bye %s!", name);
+    public String bye(@RequestParam(value = "age") int age) {
+        return String.format("Bye %d!", age);
     }
 }
